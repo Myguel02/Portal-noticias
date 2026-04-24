@@ -171,7 +171,7 @@ A página de login possui botões para simular acesso:
 
 Link do protótipo utilizado:
 
-👉 https://www.figma.com/design/UPbbWqRvfQtApJK617KSfm/ABWServices
+👉(https://www.figma.com/design/UPbbWqRvfQtApJK617KSfm/PortalNoticias?node-id=0-1&p=f&t=q4NeVUMyrvggkmkW-0)
 
 ---
 
