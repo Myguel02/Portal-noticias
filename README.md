@@ -1,73 +1,190 @@
-# React + TypeScript + Vite
+# 📰 Portal de Notícias
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto desenvolvido em **React + TypeScript** como parte da disciplina, com o objetivo de construir a estrutura de um portal de notícias com múltiplos níveis de acesso.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🎯 Objetivo
 
-## React Compiler
+Construir a estrutura básica de um **Portal de Notícias**, organizado em 5 níveis de acesso:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🌐 Público
+- 👤 Leitor
+- ✍️ Autor
+- 🛠️ Editor
+- 👑 SuperAdmin
 
-## Expanding the ESLint configuration
+O foco do projeto é:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Criação de páginas
+- Navegação com rotas
+- Componentização em React
+- Organização de layout com CSS puro
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## ⚠️ Observações importantes
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- ❌ Não há autenticação real
+- ✅ O login é simulado com botões de acesso rápido
+- ✅ Todas as rotas são públicas
+- ✅ Dados são estáticos (mockados)
+- ❌ Não foi utilizado backend
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+- React
+- TypeScript
+- React Router
+- Vite
+- CSS puro (sem frameworks)
+
+---
+
+## 📁 Estrutura do projeto
+
+```
+src/
+├── components/        # Componentes reutilizáveis (Navbar, etc.)
+├── pages/
+│   ├── publico/
+│   ├── leitor/
+│   ├── autor/
+│   ├── editor/
+│   ├── admin/
+├── data/              # Dados mockados
+├── App.tsx            # Rotas da aplicação
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Como executar o projeto
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. Instalar dependências
+
 ```
+npm install
+```
+
+### 2. Rodar o projeto
+
+```
+npm run dev
+```
+
+### 3. Acessar no navegador
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🔐 Simulação de Perfis (Login)
+
+A página de login possui botões para simular acesso:
+
+- LEITOR → `/leitor/perfil`
+- AUTOR → `/autor/noticias`
+- EDITOR → `/editor/painel`
+- SUPERADMIN → `/admin/dashboard`
+
+---
+
+## 📄 Principais páginas implementadas
+
+### 🌐 Público
+
+- HomePage
+- LoginPage
+- CadastroPage
+- LembrarSenhaPage
+- Busca por UF
+- Busca por Tag
+- Detalhe da Notícia
+
+### 👤 Leitor
+
+- Perfil
+- Comentar notícia
+
+### ✍️ Autor
+
+- Perfil
+- Minhas Notícias
+- Nova Notícia
+- Editar Notícia
+- Comentar
+
+### 🛠️ Editor
+
+- Painel
+- Perfil
+- Publicar/Despublicar
+- Editar qualquer notícia
+
+### 👑 SuperAdmin
+
+- Dashboard
+- CRUD UFs
+- CRUD Cidades
+- CRUD Tags
+- CRUD Notícias
+- CRUD Usuários
+- Gerenciamento de Comentários
+
+---
+
+## 🎨 Estilização
+
+- CSS puro
+- Layout responsivo básico
+- Componentes reutilizáveis
+- Cards, tabelas, formulários e grids
+
+---
+
+## 📌 Funcionalidades implementadas
+
+- Navegação entre páginas com React Router
+- Uso de `useParams` para rotas dinâmicas
+- Formulários com inputs e validação básica
+- Simulação de envio de dados
+- Armazenamento local com `localStorage`
+- Componentização (Navbar, Cards, etc.)
+
+---
+
+## 🧠 Aprendizados
+
+- Estruturação de projetos React
+- Organização por perfis de usuário
+- Uso de rotas dinâmicas
+- Criação de interfaces com CSS puro
+- Simulação de sistemas reais sem backend
+
+---
+
+## 📎 Protótipo (Figma)
+
+Link do protótipo utilizado:
+
+👉 https://www.figma.com/design/UPbbWqRvfQtApJK617KSfm/ABWServices
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por:
+
+**Myguel Arcanjo**
+
+---
+
+## 📌 Status do Projeto
+
+🚧 Em desenvolvimento (fase de estrutura e interface)
+
+---
