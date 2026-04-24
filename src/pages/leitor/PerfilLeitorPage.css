@@ -1,0 +1,67 @@
+.perfil-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.perfil-card {
+  width: 400px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.perfil-card input,
+.perfil-card textarea {
+  width: 100%;
+  margin: 5px 0;
+  padding: 8px;
+}
+
+.data {
+  font-size: 12px;
+  color: gray;
+  margin-top: 10px;
+}
+
+.botoes {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* COMENTÁRIOS */
+.comentarios {
+  margin: 40px;
+}
+
+.comentario {
+  background: #f1f5f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.comentario span {
+  display: block;
+  font-size: 12px;
+  color: gray;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  background: #0f172a;
+  color: white;
+}

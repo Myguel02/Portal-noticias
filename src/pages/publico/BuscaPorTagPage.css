@@ -1,0 +1,12 @@
+.tag-titulo {
+  padding: 30px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.noticias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 30px;
+}

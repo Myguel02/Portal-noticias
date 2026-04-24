@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background: #f1f5f9;
+}
+
+.card {
+  width: 400px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card input {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.card button {
+  padding: 10px;
+  background: #38bdf8;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.card button:hover {
+  background: #0ea5e9;
+}
+
+.sucesso {
+  color: green;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.card a {
+  margin-top: 10px;
+  text-decoration: none;
+}
